@@ -17,7 +17,7 @@ function computerPlay(){
 
  const result = randomIndex(gameOptions);
 
- console.log(result);
+ alert(result);
 
  return result;
 
@@ -27,34 +27,60 @@ function computerPlay(){
 
 // setting the conditions of the game
 
+
 function playRound(playerSelection, computerSelection){
 
    if (computerSelection == "ROCK" && playerSelection == "PAPER"){
-       console.log("You win! Paper beats Rock");
+       alert("You win! Paper beats Rock");
    } else if (computerSelection === "ROCK" && playerSelection == "SCISSORS"){
-       console.log("You loose! Rock beats Scissors");
+       alert("You loose! Rock beats Scissors");
    } else if (computerSelection === "ROCK" && playerSelection == "ROCK"){
-       console.log("It\'s a draw! Try again");
+       alert("It\'s a draw! Try again");
    } else if (computerSelection === "PAPER" && playerSelection == "ROCK"){
-       console.log("You loose! Paper beats the Rock");
+       alert("You loose! Paper beats the Rock");
    } else if (computerSelection === "PAPER" && playerSelection =="SCISSORS"){
-       console.log("You win! Scissors beat the Paper");
+       alert("You win! Scissors beat the Paper");
    } else if (computerSelection ==="PAPER" && playerSelection == "PAPER"){
-       console.log("It\'s a draw! Try again");
+       alert("It\'s a draw! Try again");
    } else if (computerSelection === "SCISSORS" && playerSelection == "PAPER"){
-       console.log("You loose! Scissors beat Paper");
+       alert("You loose! Scissors beat Paper");
    } else if (computerSelection === "SCISSORS" && playerSelection == "ROCK"){
-       console.log("You win! Rock beats Scissors");
+       alert("You win! Rock beats Scissors");
    } else if (computerSelection === "SCISSORS" && playerSelection == "SCISSORS"){
-       console.log("It\'s a draw! Try again");
-   } else { console.log("error! Play either Rock or Paper or Scissors")
+       alert("It\'s a draw! Try again");
+       
+   } else { alert("Error! Play Rock or Paper or Scissors")
    }
+
+   
 }
+
 
 // comparing the player input and computer random result and giving a output
 
+//function game(){
+
+    
+    
+    for (let i=0; i<=5; i++){
+        if (i==5){
+            alert("Refresh the page to Play Again");
+            break;
+        } else {
   const playerSelection = prompt("make your choice:").toUpperCase();
+  
   //const playerSelection = "Rock";
   const computerSelection = computerPlay();
   console.log(playRound(playerSelection, computerSelection));
-  
+
+        }
+
+    }
+    
+
+    playRound(playerSelection, computerSelection) += [i];  
+        
+//}
+
+//game();
+
